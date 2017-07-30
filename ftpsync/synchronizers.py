@@ -108,7 +108,7 @@ class BaseSynchronizer(object):
         self._stats[name] = self._stats.get(name, 0) + ofs
 
     def _match(self, entry):
-        name = entry.name
+        name = entry.get_rel_path()
         if name == DirMetadata.META_FILE_NAME:
             return False
 #        if name in self.DEFAULT_OMIT:
